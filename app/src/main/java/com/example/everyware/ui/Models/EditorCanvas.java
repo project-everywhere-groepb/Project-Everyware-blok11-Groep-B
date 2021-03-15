@@ -15,8 +15,8 @@ import android.view.View;
 public class EditorCanvas extends View {
 
 
-    public int width;
-    public  int height;
+    private int width = 0;
+    private int height = 0;
     private Rect area;
     private Bitmap mBitmap;
     private Canvas canvas;
@@ -61,11 +61,9 @@ public class EditorCanvas extends View {
         invalidate();
     }
 
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-
-        if(!area.contains((int) event.getX(),(int) event.getY())){
+        if(area == null || !area.contains((int) event.getX(),(int) event.getY())){
             super.onTouchEvent(event);
             return false;
         }
