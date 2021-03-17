@@ -29,13 +29,22 @@ Project wordt een mobiele app en webapp gemaakt voor video bewerking van sporter
 
 # Coding guidelines:
 **Voor alle projecten**
+Hanteer leesbare variabelen en class names
+
 Classes zijn CamelCase
 ```java
   public class MyNewClass() {
   }
 ```
 Methods en variablen zijn camelCase
-Hanteer leesbare variabelen en class names
+```java
+  public class MyNewClass() {
+    private int myFirstInt;
+  
+    public myFirstMethod(){
+    }
+  }
+```
 
 **Voor Android**
 Standaard Android studio linter wordt gebruikt met de default settings
